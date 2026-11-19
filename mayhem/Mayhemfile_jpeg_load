@@ -1,0 +1,9 @@
+project: savantenvs/DirectXTex
+target: jpeg_load
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/jpeg_load/testsuite
+cmds:
+  - cmd: /mayhem/out/fuzz/fuzz_jpeg_load
+    libfuzzer: true
+    timeout: 10

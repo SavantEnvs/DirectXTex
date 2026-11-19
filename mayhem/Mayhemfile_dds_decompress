@@ -1,0 +1,9 @@
+project: savantenvs/DirectXTex
+target: dds_decompress
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/dds_decompress/testsuite
+cmds:
+  - cmd: /mayhem/out/fuzz/fuzz_dds_decompress
+    libfuzzer: true
+    timeout: 10

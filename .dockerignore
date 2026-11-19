@@ -1,0 +1,11 @@
+# .dockerignore for the commit-image build: the FULL repo (incl. .git) goes in; only local build
+# output is dropped. Upstream's own build/ directory holds sources (scripts, vcpkg ports), so it is
+# NOT excluded here; build.sh writes its build trees under out/ (gitignored upstream).
+/out/
+*.o
+*.a
+*.so
+**/__pycache__/
+.DS_Store
+*.swp
+*~

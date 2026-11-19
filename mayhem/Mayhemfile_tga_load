@@ -1,0 +1,9 @@
+project: savantenvs/DirectXTex
+target: tga_load
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/tga_load/testsuite
+cmds:
+  - cmd: /mayhem/out/fuzz/fuzz_tga_load
+    libfuzzer: true
+    timeout: 10

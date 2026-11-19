@@ -1,0 +1,2 @@
+# Workflows keep LF line endings (the repo-wide .gitattributes sets *.yml eol=crlf).
+*.yml -text

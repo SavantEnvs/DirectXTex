@@ -1,0 +1,9 @@
+project: savantenvs/DirectXTex
+target: hdr_load
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/hdr_load/testsuite
+cmds:
+  - cmd: /mayhem/out/fuzz/fuzz_hdr_load
+    libfuzzer: true
+    timeout: 10

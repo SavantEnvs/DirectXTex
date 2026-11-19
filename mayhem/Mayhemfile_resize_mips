@@ -1,0 +1,9 @@
+project: savantenvs/DirectXTex
+target: resize_mips
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/resize_mips/testsuite
+cmds:
+  - cmd: /mayhem/out/fuzz/fuzz_resize_mips
+    libfuzzer: true
+    timeout: 10

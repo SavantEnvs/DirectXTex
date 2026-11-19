@@ -1,0 +1,9 @@
+project: savantenvs/DirectXTex
+target: save_roundtrip
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/save_roundtrip/testsuite
+cmds:
+  - cmd: /mayhem/out/fuzz/fuzz_save_roundtrip
+    libfuzzer: true
+    timeout: 10

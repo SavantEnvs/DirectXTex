@@ -1,0 +1,9 @@
+project: savantenvs/DirectXTex
+target: bc_compress
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/bc_compress/testsuite
+cmds:
+  - cmd: /mayhem/out/fuzz/fuzz_bc_compress
+    libfuzzer: true
+    timeout: 10
